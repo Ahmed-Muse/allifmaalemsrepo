@@ -4,5 +4,6 @@ app_name='allifmainapp'
 urlpatterns = [
 
 path('', views.allifmaalmaindashboard, name="allifmaalmaindashboard"),
+path('for-testing-only', views.fortestingonly, name="fortestingonly"),
 
 ]  
