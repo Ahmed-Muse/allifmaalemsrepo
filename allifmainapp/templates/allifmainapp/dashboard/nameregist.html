@@ -1,0 +1,50 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<header>
+    <title>
+        First Allifmaal Website on Linode...
+    </title>
+    <link href="{% static 'css/allifstyle.css' %}" rel="stylesheet">
+</header>
+<body>
+<h1>
+    This is the first Allifmaal Website deployed onto Linode Server!
+</h1>
+<p>
+    The team is really excited on this achievement...
+</p>
+<p>we have made some changes....</p>
+<hr>
+
+<form method='POST' action='' enctype="multipart/form-data">{% csrf_token %}
+    {{form}}
+    <input type="submit" value='   Save    ' class="btn btn-success">
+    </form>
+    {% for name in names %}
+    {{name.name}}
+    {% if name.myimage %}
+                 <img src="{{name.myimage.url}}"  style="width: 100px;">
+                {% else %}
+                <span class="text-muted">No cover</span>
+                {% endif %}
+
+    {{name.m}}
+    <a href="{{ name.mydocument.url }}" class="btn btn-primary btn-sm" target="_blank" >
+        <img src="" width="30"></a></td>
+    {{name.mydocument}}
+    {% endfor %}
+    addded domain two
+    <h1>
+        my custom domain is working alx
+    </h1>
+
+
+    <a href="{% url 'allifmainapp:allifmaalmaindashboard' %}">
+        allifmaalapp
+    </a>
+
+    
+   
+</body>
+</html>

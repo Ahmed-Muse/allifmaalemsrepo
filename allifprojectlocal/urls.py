@@ -11,9 +11,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('allifmainapp.urls')),
 
-  
-
-
      #path('allifmainapp/', include('allifmainapp.urls')),
 
     

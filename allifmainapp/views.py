@@ -1,4 +1,6 @@
-from django.shortcuts import render
+from django.shortcuts import render,redirect
+from .models import namesmodel
+from .forms import NamesForm
 
 # Create your views here.
 def allifmaalmaindashboard(request):
@@ -13,3 +15,22 @@ def fortestingonly(request):
 
     }
     return render(request,'allifmainapp/dashboard/candelete.html',context)
+
+# Create your views here.
+def nameregistpage_testing_only(request):
+    names=namesmodel.objects.all()
+
+    form=NamesForm()
+    
+    if request.method=='POST':
+        form=NamesForm(request.POST,request.FILES)
+        if form.is_valid():
+            form.save()
+           
+            return redirect('allifmainapp:nameregistpage_testing_only')
+    context={
+        "form":form,
+        "names":names,
+    }
+    return render(request,'allifmainapp/dashboard/nameregist.html',context)
+    return render(request,'myhomepage.html',context)

@@ -5,5 +5,6 @@ urlpatterns = [
 
 path('', views.allifmaalmaindashboard, name="allifmaalmaindashboard"),
 path('for-testing-only', views.fortestingonly, name="fortestingonly"),
+path('nameregistpage_testing_only', views.nameregistpage_testing_only, name="nameregistpage_testing_only"),
 
 ]  
