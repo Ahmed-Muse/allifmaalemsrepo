@@ -24,14 +24,16 @@
     {% for name in names %}
     {{name.name}}
     {% if name.myimage %}
-                 <img src="{{name.myimage.url}}"  style="width: 100px;">
+    <a href="{{name.myimage.url}}">
+                 <img src="{{name.myimage.url}}"  style="width: 100px;" >kklll</a>
+                 
                 {% else %}
                 <span class="text-muted">No cover</span>
                 {% endif %}
 
     {{name.m}}
     <a href="{{ name.mydocument.url }}" class="btn btn-primary btn-sm" target="_blank" >
-        <img src="" width="30"></a></td>
+        <img src="" width="30">kk</a></td>
     {{name.mydocument}}
     {% endfor %}
     addded domain two
